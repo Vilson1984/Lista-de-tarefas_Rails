@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @listum %>
+
+<div>
+  <br>
+  <%= link_to "Editar lista", edit_listum_path(@listum) %> |
+  <%= link_to "Voltar para lista", lista_path %>
+</div>
+
+<div>
+  <br>
+  <%= button_to "Deletar lista", @listum, method: :delete %>
+  
+</div>

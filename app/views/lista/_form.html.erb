@@ -1,0 +1,64 @@
+<%= form_with(model: listum) do |form| %>
+  <% if listum.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(listum.errors.count, "error") %> prohibited this item from being saved:</h2>
+      <ul>
+        <% listum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <div class="form">
+        
+    <div class="form_nome">
+      <%= form.label :nome %><br>
+      <%= form.text_field :nome %>
+    </div><br>
+
+   <div class="form_status_tarefa"> 
+      <div class="form_tarefa">
+        <%= form.label :tarefa %><br>
+        <%= form.text_field :tarefa %>
+      </div>
+      <div class="form_status">
+        <%= form.label :status %><br>
+        <%= form.select :status, ["Início", "Em Andamento", "Concluído", "A Fazer"]  %>
+      </div>
+    </div><br><br>
+    
+    <div class="form_categoria">
+
+      <%= form.label :categoria, "Categoria:" %><br>
+
+      <%= form.radio_button :categoria, "Pessoal" %>
+      <%= form.label :categoria_pessoal, "Pessoal" %>
+      
+      <%= form.radio_button :categoria, "Financeiro" %>
+      <%= form.label :categoria_financeiro, "Financeiro" %>
+      
+      <%= form.radio_button :categoria, "Estudo" %>
+      <%= form.label :categoria_estudo, "Estudo" %>
+    
+      <%= form.radio_button :categoria, "Família" %>
+      <%= form.label :categoria_família, "Família" %>
+            
+      <%= form.radio_button :categoria, "Saúde" %>
+      <%= form.label :categoria_saúde, "Saúde" %>
+    </div><br>
+   
+    <div class="form_data">
+      <%= form.label :data_início%>
+      <%= form.date_field :data_início%>
+
+      <%= form.label :data_conclusão%>
+      <%= form.date_field :data_conclusão%>
+    </div>
+
+  </div>
+
+  <div>
+    <%= form.submit "Criar item" %>
+  </div>
+<% end %>

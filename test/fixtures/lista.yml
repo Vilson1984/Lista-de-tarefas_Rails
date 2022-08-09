@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  tarefa: MyString
+  status: MyString
+  categoria: MyString
+  data_inicio: MyString
+  data_conclusao: MyString
+
+two:
+  nome: MyString
+  tarefa: MyString
+  status: MyString
+  categoria: MyString
+  data_inicio: MyString
+  data_conclusao: MyString

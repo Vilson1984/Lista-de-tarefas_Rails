@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lista</h1>
+
+
+<div>
+<div id="lista">
+  <% @lista.each do |listum| %>
+    <%= render listum %>
+    <br>  
+    <br>
+
+    <div class="LinkMostrarLista">
+       <%= link_to "Mostrar lista", listum %>
+    </div>
+    <%= link_to "Nova Lista", new_listum_path %>
+  <% end %>
+</div>
+
+
+</div>
