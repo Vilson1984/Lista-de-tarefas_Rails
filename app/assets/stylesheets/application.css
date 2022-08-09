@@ -51,12 +51,17 @@
 }
 
 .form_status_tarefa{
-    display: grid;
+    display: inline-flex;
+    padding: 1em;
+}
+
+.form_tarefa{
+    border-right: solid 1px #fff;
+    padding-right: 4em;
 }
 
 .form_status{
-position:absolute;
-left:21em;
+    padding-left: 3em;
 }
 
 label{

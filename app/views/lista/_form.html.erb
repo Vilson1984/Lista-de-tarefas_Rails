@@ -1,3 +1,5 @@
+<center>
+
 <%= form_with(model: listum) do |form| %>
   <% if listum.errors.any? %>
     <div style="color: red">
@@ -10,6 +12,7 @@
     </div>
   <% end %>
  
+ 
   <div class="form">
         
     <div class="form_nome">
@@ -18,10 +21,12 @@
     </div><br>
 
    <div class="form_status_tarefa"> 
+        
       <div class="form_tarefa">
         <%= form.label :tarefa %><br>
         <%= form.text_field :tarefa %>
       </div>
+      
       <div class="form_status">
         <%= form.label :status %><br>
         <%= form.select :status, ["Início", "Em Andamento", "Concluído", "A Fazer"]  %>
